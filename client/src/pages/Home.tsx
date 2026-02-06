@@ -117,8 +117,7 @@ export default function Home() {
               className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-8 leading-tight"
               data-testid="text-hero-title"
             >
-              IndoStage Creative
-              <span className="block text-primary">&amp; Production</span>
+              Indo
             </motion.h1>
 
             <motion.p

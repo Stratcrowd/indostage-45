@@ -30,24 +30,21 @@ export default function Navigation() {
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border' 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
           <Link href="/" className="flex items-center space-x-3 group" data-testid="link-home">
-            <div className={`font-serif font-bold transition-all duration-300 ${
-              scrolled ? 'text-2xl text-primary' : 'text-3xl text-white'
-            }`}>
+            <div className={`font-serif font-bold transition-all duration-300 ${scrolled ? 'text-2xl text-primary' : 'text-3xl text-white'
+              }`}>
               <span className="group-hover:text-primary transition-colors">Indo</span>
-              <span className={scrolled ? 'text-foreground' : 'text-white'}>Stage</span>
             </div>
           </Link>
 
@@ -57,15 +54,14 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative px-5 py-2 font-medium transition-colors ${
-                  scrolled 
-                    ? isActive(link.href) 
-                      ? 'text-primary' 
+                className={`relative px-5 py-2 font-medium transition-colors ${scrolled
+                    ? isActive(link.href)
+                      ? 'text-primary'
                       : 'text-foreground hover:text-primary'
                     : isActive(link.href)
                       ? 'text-primary'
                       : 'text-white/90 hover:text-white'
-                }`}
+                  }`}
                 data-testid={`link-${link.label.toLowerCase()}`}
               >
                 {link.label}
@@ -83,9 +79,8 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              scrolled ? 'text-foreground hover:bg-muted' : 'text-white hover:bg-white/10'
-            }`}
+            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? 'text-foreground hover:bg-muted' : 'text-white hover:bg-white/10'
+              }`}
             data-testid="button-menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -112,11 +107,10 @@ export default function Navigation() {
                   >
                     <Link
                       href={link.href}
-                      className={`block py-4 px-6 font-medium transition-colors ${
-                        isActive(link.href)
+                      className={`block py-4 px-6 font-medium transition-colors ${isActive(link.href)
                           ? 'text-primary bg-primary/10'
                           : 'text-foreground hover:text-primary hover:bg-muted'
-                      }`}
+                        }`}
                       onClick={() => setIsOpen(false)}
                       data-testid={`link-mobile-${link.label.toLowerCase()}`}
                     >
