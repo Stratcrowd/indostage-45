@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Calendar, Music } from "lucide-react";
+import { X, ExternalLink, Music } from "lucide-react";
 
 export default function GhazalPopup() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ export default function GhazalPopup() {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="relative w-full max-w-md bg-card border border-primary/20 shadow-2xl rounded-2xl p-6 md:p-8 overflow-hidden"
+            className="relative w-full max-w-sm bg-card border border-primary/20 shadow-2xl rounded-2xl p-6 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Decorative Elements */}
@@ -56,34 +56,25 @@ export default function GhazalPopup() {
 
             {/* Content */}
             <div className="flex flex-col items-center text-center space-y-4 pt-2 relative z-10">
-              <div className="bg-primary/10 p-4 rounded-full mb-2 ring-1 ring-primary/20">
-                <Music className="w-8 h-8 text-primary" />
+              <div className="bg-primary/10 p-3 rounded-full mb-1 ring-1 ring-primary/20">
+                <Music className="w-6 h-6 text-primary" />
               </div>
               
               <div className="space-y-2">
-                <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground leading-tight">
-                  Ghazal Revival
+                <h2 className="text-xl md:text-2xl font-serif font-bold text-foreground leading-tight">
+                  Book Tickets for <br/> Ghazal Revival
                 </h2>
-                <p className="text-lg text-primary font-medium flex items-center justify-center gap-2">
-                  <Calendar size={18} />
-                  <span>7th February</span>
-                </p>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed px-2">
-                Join us for an enchanting evening of music and soul. <br/>
-                <span className="text-sm italic">Mumbai Edition is Here!</span>
-              </p>
-
-              <div className="pt-4 w-full">
+              <div className="pt-2 w-full">
                 <a
                   href="https://rebrand.ly/indostage"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3.5 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0"
+                  className="inline-flex w-full items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-xl font-semibold text-lg transition-all shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0"
                   onClick={handleClose}
                 >
-                  <span>Get Tickets Now</span>
+                  <span>Book Now</span>
                   <ExternalLink size={18} />
                 </a>
               </div>
