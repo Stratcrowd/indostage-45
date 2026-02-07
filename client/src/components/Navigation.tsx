@@ -20,7 +20,7 @@ export default function Navigation() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
-    { href: "/team", label: "Team" },
+    { href: "/shivachatrapati", label: "Varsa Shauryacha" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -35,8 +35,8 @@ export default function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border'
-          : 'bg-transparent'
+        ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border'
+        : 'bg-transparent'
         }`}
     >
       <div className="container mx-auto px-4">
@@ -55,12 +55,12 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`relative px-5 py-2 font-medium transition-colors ${scrolled
-                    ? isActive(link.href)
-                      ? 'text-primary'
-                      : 'text-foreground hover:text-primary'
-                    : isActive(link.href)
-                      ? 'text-primary'
-                      : 'text-white/90 hover:text-white'
+                  ? isActive(link.href)
+                    ? 'text-primary'
+                    : 'text-foreground hover:text-primary'
+                  : isActive(link.href)
+                    ? 'text-primary'
+                    : 'text-white/90 hover:text-white'
                   }`}
                 data-testid={`link-${link.label.toLowerCase()}`}
               >
@@ -108,8 +108,8 @@ export default function Navigation() {
                     <Link
                       href={link.href}
                       className={`block py-4 px-6 font-medium transition-colors ${isActive(link.href)
-                          ? 'text-primary bg-primary/10'
-                          : 'text-foreground hover:text-primary hover:bg-muted'
+                        ? 'text-primary bg-primary/10'
+                        : 'text-foreground hover:text-primary hover:bg-muted'
                         }`}
                       onClick={() => setIsOpen(false)}
                       data-testid={`link-mobile-${link.label.toLowerCase()}`}

@@ -15,7 +15,7 @@ import type { InsertContactInquiry } from "@shared/schema";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
 };
 
 const staggerContainer = {
@@ -89,14 +89,14 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-background overflow-hidden">
       <Navigation />
-      
+
       {/* Hero Section */}
-      <section 
+      <section
         className="relative min-h-[60vh] flex items-center justify-center bg-cover bg-center pt-20"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background" />
-        <div 
+        <div
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `url(${mandalaImage})`,
@@ -105,7 +105,7 @@ export default function Contact() {
             backgroundPosition: "center",
           }}
         />
-        
+
         <div className="container mx-auto px-4 relative z-10 text-center text-white py-20">
           <motion.div
             initial="hidden"
@@ -115,14 +115,14 @@ export default function Contact() {
             <motion.p variants={fadeInUp} className="text-primary font-medium tracking-[0.3em] uppercase mb-6 text-sm">
               Let's Create Together
             </motion.p>
-            <motion.h1 
+            <motion.h1
               variants={fadeInUp}
-              className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8" 
+              className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-8"
               data-testid="text-contact-title"
             >
               Get In Touch
             </motion.h1>
-            <motion.p 
+            <motion.p
               variants={fadeInUp}
               className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90 font-light"
             >
@@ -146,17 +146,17 @@ export default function Contact() {
               <Sparkles className="w-5 h-5 text-primary" />
               <span className="text-primary font-medium tracking-wider uppercase text-sm">Reach Out</span>
             </motion.div>
-            
+
             <motion.h2 variants={fadeInUp} className="text-4xl font-serif font-bold mb-6">
               We're Here to <span className="text-primary">Listen</span>
             </motion.h2>
-            
+
             <motion.p variants={fadeInUp} className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Whether you're planning a grand cultural festival, seeking artistic collaboration, or simply 
-              want to learn more about what we do—we welcome your message. Every inquiry receives our 
+              Whether you're planning a grand cultural festival, seeking artistic collaboration, or simply
+              want to learn more about what we do—we welcome your message. Every inquiry receives our
               personal attention.
             </motion.p>
-            
+
             <motion.div variants={staggerContainer} className="space-y-6 mb-10">
               <motion.div variants={scaleIn} className="flex items-start gap-5 p-5 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -164,7 +164,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">info@indostage.com</p>
+                  <p className="text-muted-foreground">pradnya@indostage.in</p>
                   <p className="text-sm text-muted-foreground/70 mt-1">We respond within 24-48 hours</p>
                 </div>
               </motion.div>
@@ -175,7 +175,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Call Us</h3>
-                  <p className="text-muted-foreground">+91 XXX XXX XXXX</p>
+                  <p className="text-muted-foreground">+91 836 984 5536</p>
                   <p className="text-sm text-muted-foreground/70 mt-1">Monday to Saturday, 10am - 7pm IST</p>
                 </div>
               </motion.div>
@@ -192,11 +192,11 @@ export default function Contact() {
               </motion.div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               variants={fadeInUp}
               className="bg-accent text-accent-foreground rounded-xl p-8 relative overflow-hidden"
             >
-              <div 
+              <div
                 className="absolute top-0 right-0 w-32 h-32 opacity-10"
                 style={{
                   backgroundImage: `url(${mandalaImage})`,
@@ -222,7 +222,7 @@ export default function Contact() {
             <div className="bg-card border border-border rounded-2xl p-10 shadow-xl">
               <h2 className="text-3xl font-serif font-bold mb-2">Send a Message</h2>
               <p className="text-muted-foreground mb-8">Fill out the form below and we'll be in touch shortly.</p>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name" className="text-base font-medium">Full Name *</Label>
@@ -282,8 +282,8 @@ export default function Contact() {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   size="lg"
                   className="w-full bg-primary hover:bg-primary/90 h-14 text-lg font-semibold group"
                   disabled={mutation.isPending}
@@ -317,10 +317,10 @@ export default function Contact() {
             <motion.h2 variants={fadeInUp} className="text-3xl font-serif font-bold mb-8">
               Reach Out If You're...
             </motion.h2>
-            
+
             <motion.div variants={staggerContainer} className="grid md:grid-cols-2 gap-4">
               {reasons.map((reason, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   variants={scaleIn}
                   className="flex items-center gap-3 p-4 bg-card rounded-lg border border-border"

@@ -14,13 +14,16 @@ import SocialSidebar from "@/components/SocialSidebar";
 import WhatsAppPopup from "@/components/WhatsAppPopup";
 import GhazalPopup from "@/components/GhazalPopup";
 
+import Shivachatrapati from "@/pages/Shivachatrapati";
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
-      <Route path="/team" component={Team} />
+      <Route path="/shivachatrapati" component={Shivachatrapati} />
+      {/* <Route path="/team" component={Team} /> */}
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
@@ -33,7 +36,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <ScrollToTop />
-        <GhazalPopup />
+        {/* <GhazalPopup /> */}
         <SocialSidebar />
         <WhatsAppPopup />
         <Router />

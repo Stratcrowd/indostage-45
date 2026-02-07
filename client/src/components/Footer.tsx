@@ -80,14 +80,14 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-sm text-secondary-foreground/70">Email</p>
-                  <p className="text-secondary-foreground">info@indostage.com</p>
+                  <p className="text-secondary-foreground">pradnya@indostage.in</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-sm text-secondary-foreground/70">Phone</p>
-                  <p className="text-secondary-foreground">+91 XXX XXX XXXX</p>
+                  <p className="text-secondary-foreground">+91 836 984 5536</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
